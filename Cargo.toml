@@ -1,0 +1,19 @@
+[package]
+name = "rust-backend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+axum = "0.8.9"
+dotenvy = "0.15.7"
+opentelemetry = { version = "0.33.1", features = ["metrics", "trace"] }
+opentelemetry-otlp = { version = "0.33.1", features = ["tokio", "metrics", "trace", "grpc-tonic"] }
+opentelemetry-semantic-conventions = { version = "0.33.1", features = ["semconv_experimental"] }
+opentelemetry_sdk = { version = "0.33.1", features = ["tokio", "trace"] }
+serde = { version = "1.0.229", features = ["derive"] }
+tokio = { version = "1.53.2", features = ["full"] }
+tower-http = { version = "0.7.1", features = ["trace"] }
+tracing = "0.1.44"
+tracing-opentelemetry = "0.34.0"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "json"] }
